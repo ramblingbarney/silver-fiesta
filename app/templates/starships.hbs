@@ -1,7 +1,12 @@
 <h1>starships</h1>
 
-{{#each this.model as |post|}}
-  <div>
-    {{post.title}}
-  </div>
-{{/each}}
+<p>Name: {{this.model.name}}</p>
+<p>Model: {{this.model.model}}</p>
+<p>Max Atmosphering Speed: {{this.model.maxAtmospheringSpeed}}</p>
+<p>Cost In Credits: {{this.model.costInCredits}}</p>
+<p>Crew: {{this.model.crew}}</p>
+<p>Length: {{this.model.length}}</p>
+<p>Starship Class: {{this.model.starshipClass}}</p>
+<p>Cargo Capacity: {{this.model.cargoCapacity}}</p>
+<p>Hyperdrive Rating: {{this.model.hyperdriveRating}}</p>
+<p>passengers: {{this.model.passengers}}</p>
