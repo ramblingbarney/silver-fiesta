@@ -23,8 +23,8 @@ export default Route.extend({
       //refresh the model
       this.refresh();
     },
-    error(error, transition) {
-      this.transitionTo('notFound');
+    error() {
+      this.transitionTo('not-found');
     }
   }
 });

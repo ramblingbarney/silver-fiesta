@@ -12,15 +12,7 @@ module('Integration | Component | game-starships', function(hooks) {
 
     await render(hbs`{{game-starships}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.querySelector('h1').textContent.trim(), 'StarShips');
 
-    // Template block usage:
-    await render(hbs`
-      {{#game-starships}}
-        template block text
-      {{/game-starships}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

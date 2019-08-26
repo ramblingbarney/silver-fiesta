@@ -12,15 +12,7 @@ module('Integration | Component | game-people', function(hooks) {
 
     await render(hbs`{{game-people}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.querySelector('h1').textContent.trim(), 'People');
 
-    // Template block usage:
-    await render(hbs`
-      {{#game-people}}
-        template block text
-      {{/game-people}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

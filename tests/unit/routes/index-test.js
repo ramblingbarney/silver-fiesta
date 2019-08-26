@@ -8,4 +8,5 @@ module('Unit | Route | index', function(hooks) {
     let route = this.owner.lookup('route:index');
     assert.ok(route);
   });
+
 });

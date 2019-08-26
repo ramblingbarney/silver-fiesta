@@ -8,4 +8,5 @@ module('Unit | Route | leaderboard', function(hooks) {
     let route = this.owner.lookup('route:leaderboard');
     assert.ok(route);
   });
+
 });

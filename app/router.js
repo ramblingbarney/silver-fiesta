@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('people');
   this.route('starships');
   this.route('leaderboard');
-  this.route('notFound');
+  this.route('not-found');
 });
 
 export default Router;

@@ -12,15 +12,6 @@ module('Integration | Component | player-leaderboard', function(hooks) {
 
     await render(hbs`{{player-leaderboard}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#player-leaderboard}}
-        template block text
-      {{/player-leaderboard}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'computer - 0');
   });
 });

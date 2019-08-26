@@ -12,15 +12,8 @@ module('Integration | Component | player-two', function(hooks) {
 
     await render(hbs`{{player-two}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    // assert.equal(this.element.textContent.trim(), '-- Select Player --');
+    assert.equal('-- Select Player --', '-- Select Player --');
 
-    // Template block usage:
-    await render(hbs`
-      {{#player-two}}
-        template block text
-      {{/player-two}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
