@@ -14,19 +14,40 @@
         {{/link-to}}
       </li>
       <li class="nav-item active">
-        {{#link-to "people"}}
-          <a class="nav-link" href="">People <span class="sr-only">(current)</span></a>
+        {{#if this.personsNumber.totalPeople}}
+          {{#link-to "people"}}
+            <a class="nav-link" href="">People ({{this.personsNumber.totalPeople}})<span class="sr-only">(current)</span></a>
+          {{/link-to}}
+        {{else}}
+          <p class="nav-link">People Loading...<span class="sr-only">(current)</span></p>
+        {{/if}}
+      </li>
+      <li class="nav-item active">
+        {{#if this.starshipsNumber.totalStarships}}
+          {{#link-to "starships"}}
+            <a class="nav-link" href="">Starships ({{this.starshipsNumber.totalStarships}})<span class="sr-only">(current)</span></a>
+          {{/link-to}}
+        {{else}}
+          <p class="nav-link">Starships Loading...<span class="sr-only">(current)</span></p>
+        {{/if}}
+      </li>
+      <li class="nav-item active">
+        {{#link-to "leaderboard"}}
+          <a class="nav-link" href="">Leaderboard <span class="sr-only">(current)</span></a>
         {{/link-to}}
       </li>
       <li class="nav-item active">
-        {{#link-to "starships"}}
-          <a class="nav-link" href="">Starships <span class="sr-only">(current)</span></a>
-        {{/link-to}}
+        {{player-one addedPlayerProp=playerDropdown}}
+      </li>
+      <li class="nav-item active">
+        {{player-two addedPlayerProp=playerDropdown}}
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <form {{action "addPlayer" on="submit"}} class="form-inline my-2 my-lg-0">
+      <div >
+        <p>{{input type="text" value=name}}</p>
+      </div>
+      <button class="btn btn-outline-success my-2 my-sm-0">Add Player</button>
     </form>
   </div>
 </nav>

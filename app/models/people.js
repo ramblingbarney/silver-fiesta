@@ -10,6 +10,5 @@ export default DS.Model.extend({
   eyeColor  :DS.attr('string'),
   birthYear :DS.attr('string'),
   gender    :DS.attr('string'),
-  starships :DS.attr('string')
 
 });

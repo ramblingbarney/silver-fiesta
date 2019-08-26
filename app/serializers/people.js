@@ -16,7 +16,6 @@ export default class ApplicationSerializer extends DS.JSONSerializer {
           eyeColor: payload.eye_color,
           birthYear: payload.birth_year,
           gender: payload.gender,
-          starships: payload.starships
         }
       }
     }

@@ -1,13 +1,12 @@
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import { setupTest } from 'ember-mocha';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-describe('Unit | Adapter | application', function() {
-  setupTest();
+module('Unit | Adapter | application', function(hooks) {
+  setupTest(hooks);
 
   // Replace this with your real tests.
-  it('exists', function() {
+  test('it exists', function(assert) {
     let adapter = this.owner.lookup('adapter:application');
-    expect(adapter).to.be.ok;
+    assert.ok(adapter);
   });
 });
