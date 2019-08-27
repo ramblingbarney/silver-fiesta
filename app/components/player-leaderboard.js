@@ -12,7 +12,7 @@ didInsertElement(){
 
     for (let i=0; i < this.players.allPlayers.length; i++){
 
-      leaderboard += "<li>" + this.players.allPlayers[i].name + " - " + this.players.allPlayers[i].score + "</li>";
+      leaderboard += "<li class=\"leaderboard-li\">" + this.players.allPlayers[i].name + " - " + this.players.allPlayers[i].score + "</li>";
 
 
     }
