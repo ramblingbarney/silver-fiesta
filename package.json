@@ -58,7 +58,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
-    "chromedriver": "^76.0.0",
+    "chromedriver": "^119.0.1",
     "selenium-webdriver": "^4.0.0-alpha.4"
   }
 }
